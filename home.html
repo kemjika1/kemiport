@@ -1,0 +1,169 @@
+<!-- <?php 
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "kemi";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully<br>";
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fullname = $_POST['fullname'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $textme = $_POST['textme'];
+    
+    $stmt = $conn->prepare("INSERT INTO contacts (fullname, phone, email, textme) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $fullname, $phone, $email, $textme);
+    
+
+    if ($stmt->execute()) {
+        echo "New record created successfully<br>";
+        echo "You entered the following details:<br>";
+        echo "Full Name: " . htmlspecialchars($fullname) . "<br>";
+        echo "Phone: " . htmlspecialchars($phone) . "<br>";
+        echo "Email: " . htmlspecialchars($email) . "<br>";
+        echo "Message: " . htmlspecialchars($textme) . "<br>";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?> -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ENGR KEMI</title>
+     <link rel="stylesheet" href="home.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ </head>
+ <body>
+     <header id="hdr">
+         <h4 id="akp">ALOZIE KEMJIKA PERSEVERANCE</h4>
+         <ul id="ull">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="#fst">About</a></li>
+             <li><a href="#ftd1">Skills</a></li>
+             <li><a href="#frm">Contact</a></li>   
+         </ul>
+ 
+          <!-- Menu Icon -->
+    <div class="container" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html">Home</a>
+        <a href="#fst">About</a>
+        <a href="#ftd1">Skills</a>
+        <a href="#frm">Contact</a>
+    </div>
+
+    <script>
+        // Toggle the menu icon and navigation
+function toggleMenu(x) {
+    x.classList.toggle("change");
+    toggleNav();
+}
+
+// Function to open or close the side navigation
+function toggleNav() {
+    var sidenav = document.getElementById("mySidenav");
+    if (sidenav.style.display === "block") {
+        sidenav.style.display = "none"; // Close the menu
+    } else {
+        sidenav.style.display = "block"; // Open the menu
+    }
+}
+
+// Function to close the navigation menu when a link is clicked
+function closeNav() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.querySelector(".container").classList.remove("change"); // Reset the menu icon state
+}
+
+// Close the menu when a navigation link is clicked
+var navLinks = document.querySelectorAll("#mySidenav a");
+
+navLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+        closeNav(); // Close the menu when a link is clicked
+    });
+});
+
+    </script>
+     </header>
+ 
+     <img id="pic1" src="images/kem1.jpg" alt="ALOZIE KEMJIKA P">
+     
+     <h2 id="h22">
+         Welcome to the official webpage of engineer 
+         <br>
+         <span style="font-style: italic;">ALOZIE KEMJIKA PERSEVERANCE</span>
+     </h2>
+ 
+     <div id="fst">
+         <div id="fst1">
+             <h1 id="intro">INTRODUCTION</h1>
+             <i id="ifam" class="fa-solid fa-user" style="color: white; font-size: 250px; margin-left: 75px;"></i>
+         </div>
+ 
+         <div id="fst12">
+             <p id="p1">
+                 I'm Alozie Kemjika Perseverance, a multi-talented engineer with expertise in web/app development (full stack), piping engineering (pipe fitter/welder), video editing, etc. Highly driven by passion and enthusiasm, I offer real-life solutions through accumulated experience in HTML, CSS, and JavaScript for frontend development, as well as PHP, MySQL, Node.js, etc., for backend development. The use of frameworks and libraries such as Laravel, React, and React Native is also not neglected, as they facilitate fast-paced designs and integration. In piping engineering, I am experienced in isometric drawing interpretation and fabrication as a pipe fitter, the use of various cutting machines including oxy-fuel cutting, and accurate pipe-to-fittings alignment. In welding, I am proficient in one to four fillet welding positions and one to six groove positions, all in shielded metal arc welding (SMAW). Once again, a warm welcome to working with you.
+             </p>
+         </div>
+     </div>
+ 
+     <hr style=" margin-top: 40px; border: 0; height: 2px; background: linear-gradient(to right,white, blue, white);">
+ 
+     <footer>
+         <div id="ftd1" style="width: 30%;">
+             <h5 style="text-decoration: underline; margin-top: 2px; color: white; font-style: italic; cursor: pointer;">Skills</h5>
+             <p>HTML</p>
+             <p>CSS</p>
+             <p>PHP</p>
+             <p>JavaScript</p>
+             <p>pipe fitter</p>
+             <p>pipe welding (SMAW)</p>
+             <p>React & React Native</p>
+         </div>
+         <div id="ftd2" style="width: 30%;">
+             <h5 style="text-decoration: underline; margin-top: 2px; font-style: italic; cursor: pointer;">Quick Links</h5>
+             <p><a href="home.html">Home</a></p>
+             <p><a href="#fst">About</a></p>
+             <p><a href="#ftd2">Skills</a></p>
+             <p><a href="#frm">Contact</a></p>
+         </div>
+         <div id="lastd" style="width: 30%;">
+             <h5 style="text-decoration: underline; margin-top: 20px; color: white; font-style: italic; cursor: pointer;">Contact Me</h5>
+             <form id="frm" action="" method="post">
+                 <input type="text" name="fullname" placeholder="Enter your name"><br>
+                 <input type="number" name="phone" placeholder="Enter your phone number"><br>
+                 <input type="email" name="Email" placeholder="Enter your email"><br>
+                 <textarea name="textme" placeholder="Text me"></textarea><br>
+                 <input type="submit" value="ENTER" style="background:inherit; color: white; outline: none; border: none;">
+             </form>
+         </div>
+     </footer>
+     <hr>
+ </body>
+ </html>
+ 

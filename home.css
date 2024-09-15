@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    background-color: hsl(40, 70%, 0%);
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#hdr{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+} 
+#akp{
+  color: white;
+  margin-left: 10px;
+}
+#ull{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    margin-top: -48px;
+    width: 50%;
+    list-style-type: none;
+}
+#ull>li>a{
+    color: white;
+    text-decoration: none;
+    margin-left:40px;
+    margin-right: 50px;
+    font-size: larger;
+    transition: 0.5s ease-in-out;
+}
+
+#ull>li>a:hover{
+    text-decoration: underline;
+}
+
+#ull>li>a:active{
+  color: blue;
+}
+
+#pic1{
+  width: 100%;
+  height: 1300px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-top: 50px;
+}
+
+.container {
+  display: none;
+  cursor: pointer;
+  margin-left: 90%;
+  margin-top: -72px;
+  width: 40px;
+  border-radius: 5px;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    background-color: black;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  
+  /* The side navigation menu */
+  .sidenav {
+    display: none;
+    height: 400px;
+    width: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    background-color: #111;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: center;
+    opacity: 0.9;
+  }
+  
+  /* Side navigation links */
+  .sidenav a {
+    margin: 20px 1px 0px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: hsla(0, 0%, 100%, 0.728);
+  }
+  
+  /* The close button */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+#h22{
+  color: black;
+  text-align: center;
+  margin-top: -150px;
+}
+
+#fst{
+  background: linear-gradient(to right, black 3%, hsl(240, 53%, 36%) 50%, black 98%);
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 450px;
+  margin-top: 120px;
+}
+
+#intro{
+  color: white; 
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+#p1{
+  color: white; 
+  text-align: justify;
+  font-size: 20px; 
+  margin-top: 10px;
+  margin-right: 17px;
+}
+
+#fst1{
+  width: 300em;
+}
+#fst2{
+  width: 200px;
+}
+
+footer{
+  background: linear-gradient(to right, black 3%, hsl(240, 53%, 36%) 50%, black 98%);
+  height: 300px;
+  margin-top: 70px;
+  flex-direction: row;
+  display: flex;
+  text-align: start;
+}
+h5{
+  font-size: large;
+}
+#ftd1{
+  margin-top: 20px;
+  line-height: 15px;
+  text-align: start;
+  margin-left: 25px;
+}
+
+#ftd1 p{
+font-size: small;
+cursor: pointer;
+color: white;
+}
+
+#ftd2{
+  margin-top: 20px;
+  line-height: 15px;
+  text-align: start;
+  margin-left: 25px;
+  color: white;
+}
+
+#ftd2 p{
+font-size: small;
+cursor: pointer;
+color: white;
+}
+
+#ftd2 p a{
+  text-decoration: none;
+  color: white;
+}
+
+form{
+  margin-top: 20px;
+}
+
+input{
+  background-color: inherit;
+  font-size: large;
+  width: 300px;
+  height: 30px;
+  color: white; 
+  border: none
+}
+
+input::placeholder {
+  font-size: large;
+  color: white;
+  opacity: 1; /* Ensure full opacity for the placeholder text */
+}
+
+textarea{
+  background-color: inherit;
+  border: none;
+  font-size: larger;
+  max-width: 300px;
+  max-height: 50px;
+  min-width: 300px;
+  min-height: 50px;
+  margin-top: 10px;
+  color: white;
+}
+
+textarea::placeholder {
+  font-size: larger;
+  color: white;
+  opacity: 1; /* Ensure full opacity for the placeholder text */
+}
+
+
+
+@media screen and (max-width: 600px) {
+  
+  #ull {
+      display: none;
+  }
+
+  #ull, #fst, #sec {
+      margin: 0; 
+      padding: 0;
+      width: 98%;/* Ensure full width and no overflow */
+      box-sizing: border-box; /* Include padding and border in element's width */
+  }
+
+  #pic1 {
+      border-radius: 0px;
+      height: 400px;
+      width: 100%; /* Ensure image fits within the container */
+  }
+
+  .container {
+      display: block;
+      margin-top: -45px;
+      margin-right: 3px;
+      width: 100%; /* Prevent overflow */
+  }
+
+  .sidenav {
+      display: flex;
+      flex-direction: column;
+      width: 100%; /* Ensure sidenav fits screen */
+  }
+  #fst1{
+    width:400px;
+  }
+  #fst {
+      display: flex;
+      flex-direction: column;
+      height: 850px;
+      margin-top: 90px;
+      width: 95%; /* Adjust width for screen */
+  }
+
+  #intro {
+      margin-bottom: 700px;
+      text-align: center;
+      margin-left: 5%; /* Reduce left margin for small screens */
+      margin-right: 5%; /* Add a right margin for better centering */
+  }
+
+  #ifam {
+      display: none;
+  }
+
+  #h1i {
+      position: relative;
+      top: -100px;
+      width: 98%; /* Full width to avoid overflow */
+  }
+
+  #p1 {
+      color: white;
+      text-align: justify;
+      font-size: 20px;
+      margin-top: -670px;
+      margin-left: 5%; /* Adjust margins for small screens */
+      margin-right: 5%; 
+  }
+
+  footer {
+      height: 750px;
+      display: flex;
+      flex-direction: column;
+      width: 98%; /* Ensure footer fits within screen width */
+  }
+
+  #lastd {
+      margin-left: 5%; /* Adjust to avoid overflow */
+      margin-right: 5%;
+  }
+}
+
+
