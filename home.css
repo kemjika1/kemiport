@@ -239,93 +239,62 @@ textarea::placeholder {
 
 
 
-@media screen and (max-width: 600px) {
-  
-  #ull {
-      display: none;
-  }
+@media screen and (max-width: 480px) {
+  /* Styles for smaller mobile devices (iPhones, smaller Androids) */
 
-  #hdr{
-    background-color: black;
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    top: 0px;
-    z-index: 1;
-}
-
-  #ull, #fst, #sec {
-      margin: 0; 
-      padding: 0;
-      width: 98%;/* Ensure full width and no overflow */
-      box-sizing: border-box; /* Include padding and border in element's width */
+  #hdr {
+    height: 60px; /* Reduce the header height */
   }
 
   #pic1 {
-      border-radius: 0px;
-      height: 400px;
-      width: 100%; /* Ensure image fits within the container */
-  }
-
-  .container {
-      display: block;
-      margin-top: -45px;
-      margin-right: 10px;
-  }
-
-  .sidenav {
-      display: flex;
-      flex-direction: column;
-      width: 100%; /* Ensure sidenav fits screen */
-  }
-  #fst1{
-    width:400px;
-  }
-  #fst {
-      display: flex;
-      flex-direction: column;
-      height: 850px;
-      margin-top: 90px;
-      width: 95%; /* Adjust width for screen */
+    height: 300px; /* Further reduce the image height */
   }
 
   #intro {
-      margin-bottom: 700px;
-      text-align: center;
-      margin-left: 5%; /* Reduce left margin for small screens */
-      margin-right: 5%; /* Add a right margin for better centering */
-  }
-
-  #ifam {
-      display: none;
-  }
-
-  #h1i {
-      position: relative;
-      top: -100px;
-      width: 98%; /* Full width to avoid overflow */
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 16px; /* Smaller font size for mobile */
   }
 
   #p1 {
-      color: white;
-      text-align: justify;
-      font-size: 20px;
-      margin-top: -670px;
-      margin-left: 5%; /* Adjust margins for small screens */
-      margin-right: 5%; 
+    font-size: 18px; /* Slightly smaller font size */
   }
 
   footer {
-      height: 750px;
-      display: flex;
-      flex-direction: column;
-      width: 98%; /* Ensure footer fits within screen width */
-  }
-
-  #lastd {
-      margin-left: 5%; /* Adjust to avoid overflow */
-      margin-right: 5%;
+    padding: 20px 5%;
   }
 }
 
+@media screen and (max-width: 375px) {
+  /* Styles for very small devices (narrow Android/iPhone screens) */
 
+  #hdr {
+    height: 55px; /* Further reduce header height */
+  }
+
+  #pic1 {
+    height: 250px; /* Further reduce the image size */
+  }
+
+  #intro {
+    margin-left: 4%;
+    margin-right: 4%;
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  #p1 {
+    font-size: 16px; /* Reduce the font size to ensure readability */
+  }
+
+  footer {
+    padding: 15px 4%; /* Add padding to avoid overflow */
+  }
+
+  .container {
+    margin-right: 5px;
+  }
+
+  .sidenav a {
+    font-size: 22px; /* Make side nav text smaller */
+  }
+}
